@@ -1,6 +1,6 @@
     <?php
         include_once("helpers/url.php");
-        include_once("data/data.php");
+        include_once("data/dados.php");
     ?>
 <!DOCTYPE html>
 <html lang="pt-br">

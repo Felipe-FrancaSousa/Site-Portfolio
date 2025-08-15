@@ -8,6 +8,10 @@
     box-sizing: border-box;
 }
 
+body{
+	background-color: rgb(20, 20, 20);
+}
+
 footer{
 	border-top: 10px solid #373737;
 	background-color: #263340;
@@ -33,61 +37,50 @@ p{
 	text-align: center;
 	justify-content: center;
 	align-items: center;
+	color: aliceblue;
 }
 
-.conteudo{
-	text-align: center;
+.linhas-post{
+	background-color: bisque;
 	border-top: 5px solid #373737;
-	width: 100%;
-	background-color: aquamarine;
-	display: grid;
-	justify-content: center;
-	grid-template-columns: repeat(auto-fit, 330px);
-	gap: 3px;
+	
 }
 
-.caixa-post{
-	height: 330px;
-	background-color: red;
+.conteiner-name{
+	margin: 10px;
 }
 
-.caixa-post img{
-	width: 100%;
-	height: 100%;
-}
-
-.caixa-post h1{
-	color: chartreuse;
-	margin-top: -50px;
-}
-
-/*
-
-usando Display Flex
-
-.conteudo{
-	border-top: 5px solid #373737;
-    background-color: aquamarine;
-	justify-content: center;
+.conteiner-post{
+    background-color: rgb(20, 20, 20);
     display: flex;
-	flex-wrap: wrap;
-
+	flex-wrap: nowrap;
+	overflow: scroll;
+	overflow-y: hidden;
+	scroll-snap-type: y mandatory;
 }
 
 .caixa-post{
 	text-align: center;
-	margin: 1px;
+	margin: 0px 1px 0px 1px;
 	flex: 0 0 330px;
+	max-width: 330px;
 	height: 330px;
 }
 
-.caixa-post img{
-	width: 100%;
-	height: 100%;
+.caixa-overlay{
+	opacity: 0;
+	max-width: 330px;
+	height: 330px;
+	transition: 0.5s;
+}
+
+.caixa-overlay:hover{
+	opacity: 1;
+	background: linear-gradient(to bottom, rgba(255,0,0,0), rgb(20, 20, 20));
 }
 
 .caixa-post h1{
-	color: chartreuse;
-	margin-top: -50px;
+	position: relative;
+	top: 80%;
+	color: rgb(201, 201, 201);
 }
-
