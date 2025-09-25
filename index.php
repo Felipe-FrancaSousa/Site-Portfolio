@@ -1,10 +1,12 @@
+<?php $titulo = "Artes" ;?>
 <?php include_once("templates/header.php");?>
     <main>
         <div>
-            <?php foreach($data as $post):?>
+            <!-- Cria o carrossel de imagens, $i é usado para conseguir criar vários carrosseis TinySlider2 na página -->
+            <?php $i = 0; foreach($xml->data as $data):?>
                 <script type="module">
                     var slider = tns({
-                        container: '.my-slider<?= $post['id']?>',
+                        container: '.my-slider<?= $i ?>',
                         items: 4, // Quantidade de itens que são exibidos ao mesmo tempo
                         slideBy: 'page',
                         autoplay: true,
@@ -14,21 +16,24 @@
                         nav: false // Seta visibilidade da navegação (3 pontinhos)
                     });
                 </script>
+                <!-- Puxa o nome da coleção do XML --> 
                 <div class="linhas-post">
                     <div class="conteiner-name">
-                       <h1><?=$post['name']?></h1> 
+                       <h1><?=$data->nome?></h1> 
                     </div>
-                    <div class="my-slider<?= $post['id']?>">
-                        <?php foreach($post['img'] as $img):?>
-                            <div class="img-post" style ="background: url(<?=$BASE_URL?>/data/uploads/<?=$img?>); background-size:100% 100%;">
+                    <!-- Cria o conteudo dos carrosseis --> 
+                    <div class="my-slider<?= $i?>">
+                        <?php foreach($data->img as $arquivo):?>
+                            <div class="img-post" style ="background: url(<?=$BASE_URL?>data/uploads/<?=$data['id']?>/<?= str_replace(' ', '%20', $arquivo)?>.<?=$arquivo['type']?>);background-size:100% 100%;">
+                                <!-- Cria o overlay com o nome da imagem --> 
                                 <div class = "caixa-overlay">
-                                    <h1><?= pathinfo($img)['filename'] ?></h1>
+                                    <h1><?php echo $arquivo; ?></h1>
                                 </div>
                             </div>
                         <?php endforeach; ?>
                     </div>
                 </div>
-            <?php endforeach; ?>
+            <?php $i++; endforeach; ?>
         </div>
     </main>
 <?php include_once("templates/footer.php");?>

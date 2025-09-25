@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<posts>
+  <data id="1">
+    <nome>Sapos RPG</nome>
+    <img type="jpg">Sapo Druida</img>
+    <img type="jpg">Sapo Guerreiro</img>
+    <img type="jpg">Sapo Bardo</img>
+    <img type="jpg">Sapo Mago</img>
+  </data>
+  <data id="2">
+    <nome>Lego Star Wars</nome>
+    <img type="png">Anakin</img>
+    <img type="png">C3PO</img>
+    <img type="png">Chewe</img>
+    <img type="png">HanSolo</img>
+    <img type="png">JarJarSith</img>
+    <img type="png">Leia</img>
+    <img type="png">Luke</img>
+    <img type="png">Obi-Wan</img>
+    <img type="png">ObiWan2</img>
+    <img type="png">R2D2</img>
+    <img type="png">Vader</img>
+  </data>
+  <data id="3">
+    <nome>Pokemon</nome>
+    <img type="png">CLT</img>
+    <img type="jpg">Dipirona</img>
+    <img type="png">Gengar_Princesa</img>
+    <img type="png">Jiggles</img>
+    <img type="png">Manchamps</img>
+    <img type="png">Ruptura</img>
+    <img type="png">Squirtles</img>
+    <img type="png">Tentacruels</img>
+    <img type="png">THE_Gang</img>
+    <img type="png">Umbreon</img>
+  </data>
+</posts>

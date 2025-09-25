@@ -1,5 +1,5 @@
 
 <footer>
-    <h1><?php echo $footer?></h1>
+    <h1>Acesse as minhas redes sociais:</h1>
 </footer>
 </body>
