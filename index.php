@@ -1,9 +1,10 @@
 <?php $titulo = "Artes" ;?>
 <?php include_once("templates/header.php");?>
     <main>
-        <div>
-            <!-- Cria o carrossel de imagens, $i é usado para conseguir criar vários carrosseis TinySlider2 na página -->
-            <?php $i = 0; foreach($xml->data as $data):?>
+        <!-- Seção para as coleções de artes -->
+        <section> 
+            <!-- Cria o carrossel de imagens, variável $i é usado para conseguir criar vários carrosseis TinySlider2 na página -->
+            <?php $i = 0; foreach($xml->posts->colecao as $colecao):?>
                 <script type="module">
                     var slider = tns({
                         container: '.my-slider<?= $i ?>',
@@ -17,16 +18,14 @@
                     });
                 </script>
                 <!-- Puxa o nome da coleção do XML --> 
-                <div class="linhas-post">
-                    <div class="conteiner-name">
-                       <h1><?=$data->nome?></h1> 
-                    </div>
+                <div class="colecao-linhas">
+                       <h1 class="colecao-nome"><?=$colecao->nome?></h1>
                     <!-- Cria o conteudo dos carrosseis --> 
                     <div class="my-slider<?= $i?>">
-                        <?php foreach($data->img as $arquivo):?>
-                            <div class="img-post" style ="background: url(<?=$BASE_URL?>data/uploads/<?=$data['id']?>/<?= str_replace(' ', '%20', $arquivo)?>.<?=$arquivo['type']?>);background-size:100% 100%;">
+                        <?php foreach($colecao->img as $arquivo):?>
+                            <div class="colecao-img" style ="background: url(<?=$BASE_URL?>data/artes/<?=$colecao['id']?>/<?= str_replace(' ', '%20', $arquivo)?>.<?=$arquivo['type']?>);background-size:100% 100%;">
                                 <!-- Cria o overlay com o nome da imagem --> 
-                                <div class = "caixa-overlay">
+                                <div class = "colecao-img-overlay">
                                     <h1><?php echo $arquivo; ?></h1>
                                 </div>
                             </div>
@@ -34,6 +33,23 @@
                     </div>
                 </div>
             <?php $i++; endforeach; ?>
-        </div>
+        </section>
+        <!-- Seção para os eventos anteriores -->
+        <section>
+            <div class="evento-conteiner">
+                <h1 class="evento-titulo">Eventos já participados: </h1>
+                <div class="evento-grid">
+                    <?php foreach($xml->evento->mesa as $mesas):?>
+                        <div class="evento-img" style ="background: url(<?=$BASE_URL?>data/eventos/<?= str_replace(' ', '%20', $mesas->foto)?>.<?=$mesas->foto['type']?>);background-size:100% 100%;">
+                            <!-- Cria o overlay com o nome da imagem --> 
+                            <div class = "evento-img-overlay">
+                                <h1><?php echo $mesas->nome?></h1>
+                                <h1><?php echo $mesas->data?></h1>
+                            </div>
+                        </div>
+                    <?php endforeach;?>
+                </div>
+            </div>
+        </section>
     </main>
 <?php include_once("templates/footer.php");?>

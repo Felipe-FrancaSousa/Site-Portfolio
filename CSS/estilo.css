@@ -1,5 +1,6 @@
 @charset "utf-8";
-/* CSS Document */
+
+/* Estilo geral */
 
 * {
     font-family: 'Montserrat', sans-serif;
@@ -17,15 +18,6 @@ main{
 	background-color: bisque;
 }
 
-footer{
-	padding: 10px;
-	border-top: 10px solid #373737;
-	background-color: #263340;
-	width: 100%;
-	height: 200px;
-	color: white;
-}
-
 form{
 	margin: 10px;
 }
@@ -40,36 +32,98 @@ form{
 	color: aliceblue;
 }
 
-.linhas-post{
+/* Estilo do carrossel de imagens */
+
+.colecao-linhas{
 	border-top: 5px solid #373737;
 	
 }
 
-.conteiner-name{
+.colecao-nome{
 	margin: 10px;
 }
 
-.img-post{
+.colecao-img{
 	text-align: center;
 	margin: 0px 1px 0px 1px;
 	max-width: 100%;
 	height: 330px;
 }
 
-.caixa-overlay{
+.colecao-img-overlay{
 	opacity: 0;
 	max-width: 100%;
 	height: 100%;
 	transition: 0.5s;
 }
 
-.caixa-overlay:hover{
+.colecao-img-overlay:hover{
 	opacity: 1;
 	background: linear-gradient(to bottom, rgba(255,0,0,0), rgb(20, 20, 20));
 }
 
-.img-post h1{
+.colecao-img h1{
 	position: relative;
 	top: 80%;
 	color: rgb(201, 201, 201);
+}
+
+/* Estilo da grade de eventos */
+
+.evento-conteiner{
+	border-top: 5px solid #373737;
+	min-height: 500px;
+}
+
+.evento-titulo{
+	text-align: center;
+	margin: 10px;
+}
+
+.evento-grid{
+	text-align: center;
+	border-top: 5px solid #373737;
+	width: 100%;
+	display: grid;
+	justify-content: center;
+	grid-template-columns: repeat(auto-fit, 400px);
+	gap: 3px;
+}
+
+.evento-img{
+	text-align: center;
+	margin: 0px 1px 0px 1px;
+	width: 400px;
+	height: 400px;
+}
+
+.evento-img-overlay{
+	opacity: 0;
+	max-width: 100%;
+	height: 100%;
+	transition: 0.5s;
+}
+
+.evento-img-overlay:hover{
+	opacity: 1;
+	background: linear-gradient(to bottom, rgba(255,0,0,0), rgb(20, 20, 20));
+}
+
+.evento-img h1{
+	position: relative;
+	top: 70%;
+	color: rgb(201, 201, 201);
+}
+
+/* Estilo do rodapé */
+
+footer{
+	padding: 10px;
+	border-top: 10px solid #373737;
+	background-color: #263340;
+	width: 100%;
+	height: 200px;
+	color: white;
+}
+
 }
