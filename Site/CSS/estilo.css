@@ -32,6 +32,10 @@ form{
 	color: aliceblue;
 }
 
+a{
+	text-decoration: none;
+}
+
 /* Estilo do carrossel de imagens */
 
 .colecao-linhas{
@@ -72,7 +76,6 @@ form{
 
 .evento-conteiner{
 	border-top: 5px solid #373737;
-	min-height: 500px;
 }
 
 .evento-titulo{
@@ -82,7 +85,6 @@ form{
 
 .evento-grid{
 	text-align: center;
-	border-top: 5px solid #373737;
 	width: 100%;
 	display: grid;
 	justify-content: center;
@@ -126,4 +128,22 @@ footer{
 	color: white;
 }
 
+.rodape{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.rodape-item{
+	display: flex;	
+	text-align:center;
+}
+
+.rodape-item img{
+	max-width: 100px;
+	max-height: 100px;
+}
+
+.rodape-item a{
+	color: white;
 }

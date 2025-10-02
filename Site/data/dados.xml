@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <!-- Data dos carrosseis de imagem das artes -->
+  <posts>
+    <colecao id="1">
+      <nome>Sapos RPG</nome>
+      <img type="jpg">Sapo Druida</img>
+      <img type="jpg">Sapo Guerreiro</img>
+      <img type="jpg">Sapo Bardo</img>
+      <img type="jpg">Sapo Mago</img>
+    </colecao>
+    <colecao id="2">
+      <nome>Lego Star Wars</nome>
+      <img type="png">C3PO</img>
+      <img type="png">HanSolo</img>
+      <img type="png">Luke</img>
+      <img type="png">Obi-Wan</img>
+      <img type="png">R2D2</img>
+      <img type="png">Vader</img>
+    </colecao>
+  </posts>
+  <!-- Data do grade de imagens de eventos anteriores -->
+  <evento>
+    <mesa>
+      <nome>Feira de Arte e Cultura Pop</nome>
+      <data>27/07/2025</data>
+      <foto type="png">Bunkyo</foto>
+    </mesa>
+  </evento>
+</root>
