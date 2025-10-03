@@ -8,13 +8,18 @@
                 <script type="module">
                     var slider = tns({
                         container: '.my-slider<?= $i ?>',
-                        items: 4, // Quantidade de itens que são exibidos ao mesmo tempo
+                        items: 2, // Quantidade de itens que são exibidos ao mesmo tempo
                         slideBy: 'page',
                         autoplay: true,
                         mouseDrag: true, // Seta se o carousel pode ser rotacionado com o movimento de clicar e arrastar do mouse
                         autoplayButtonOutput: false, // Seta visibilidade do botão de auto play
                         controls: false, // seta visibilidade das setas de controle
-                        nav: false // Seta visibilidade da navegação (3 pontinhos)
+                        nav: false, // Seta visibilidade da navegação (3 pontinhos)
+                        responsive:{
+                            500:{
+                                items: 4,
+                            }
+                        }
                     });
                 </script>
                 <!-- Puxa o nome da coleção do XML --> 
@@ -23,10 +28,10 @@
                     <!-- Cria o conteudo dos carrosseis --> 
                     <div class="my-slider<?= $i?>">
                         <?php foreach($colecao->img as $arquivo):?>
-                            <div class="colecao-img" style ="background: url(<?=$BASE_URL?>data/artes/<?=$colecao['id']?>/<?= str_replace(' ', '%20', $arquivo)?>.<?=$arquivo['type']?>);background-size:100% 100%;">
+                            <div class="colecao-img" style ="background: url(<?=$BASE_URL?>data/artes/<?= str_replace(' ','_',$colecao->nome)?>/<?= str_replace(' ', '%20', $arquivo)?>.<?=$arquivo['type']?>);background-size:100% 100%;">
                                 <!-- Cria o overlay com o nome da imagem --> 
                                 <div class = "colecao-img-overlay">
-                                    <h1><?php echo $arquivo; ?></h1>
+                                    <span><h1><?php echo $arquivo; ?></h1></span>
                                 </div>
                             </div>
                         <?php endforeach; ?>
@@ -43,8 +48,10 @@
                         <div class="evento-img" style ="background: url(<?=$BASE_URL?>data/eventos/<?= str_replace(' ', '%20', $mesas->foto)?>.<?=$mesas->foto['type']?>);background-size:100% 100%;">
                             <!-- Cria o overlay com o nome da imagem --> 
                             <div class = "evento-img-overlay">
-                                <h1><?php echo $mesas->nome?></h1>
-                                <h1><?php echo $mesas->data?></h1>
+                                <span>
+                                    <h1><?php echo $mesas->nome?></h1>
+                                    <h1><?php echo $mesas->data?></h1>
+                                </span>
                             </div>
                         </div>
                     <?php endforeach;?>

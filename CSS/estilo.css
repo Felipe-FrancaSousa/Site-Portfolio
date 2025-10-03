@@ -14,17 +14,17 @@ body{
 }
 
 main{
-	min-height: 300px;
+	min-height: 15vw;
 	background-color: bisque;
 }
 
 form{
-	margin: 10px;
+	margin: 0.5vw;
 }
 
 .topo{
 	width: 100%;
-	height: 200px;
+	height: 15vw;
 	display: flex;
 	text-align: center;
 	justify-content: center;
@@ -34,24 +34,33 @@ form{
 
 a{
 	text-decoration: none;
+	font-size: 2vw;
+}
+
+p{
+	font-size: 1.5vw;
+}
+
+h1{
+	font-size: 2.7vw;
 }
 
 /* Estilo do carrossel de imagens */
 
 .colecao-linhas{
-	border-top: 5px solid #373737;
+	border-top: 0.3vw solid #373737;
 	
 }
 
 .colecao-nome{
-	margin: 10px;
+	margin: 0.5vw;
 }
 
 .colecao-img{
 	text-align: center;
-	margin: 0px 1px 0px 1px;
-	max-width: 100%;
-	height: 330px;
+	margin: 0 0.1vw 0 0.1vw;
+	height: 20vw;
+	width: 20vw;
 }
 
 .colecao-img-overlay{
@@ -59,6 +68,7 @@ a{
 	max-width: 100%;
 	height: 100%;
 	transition: 0.5s;
+	position:relative;
 }
 
 .colecao-img-overlay:hover{
@@ -66,21 +76,27 @@ a{
 	background: linear-gradient(to bottom, rgba(255,0,0,0), rgb(20, 20, 20));
 }
 
+.colecao-img span{
+	position: absolute;
+    bottom: 0;
+	right: 0;
+	left: 0;
+}
+
 .colecao-img h1{
-	position: relative;
-	top: 80%;
+	
 	color: rgb(201, 201, 201);
 }
 
 /* Estilo da grade de eventos */
 
 .evento-conteiner{
-	border-top: 5px solid #373737;
+	border-top: 0.3vw solid #373737;
 }
 
 .evento-titulo{
 	text-align: center;
-	margin: 10px;
+	margin: 0.5vw;
 }
 
 .evento-grid{
@@ -88,15 +104,14 @@ a{
 	width: 100%;
 	display: grid;
 	justify-content: center;
-	grid-template-columns: repeat(auto-fit, 400px);
-	gap: 3px;
+	grid-template-columns: repeat(auto-fit, 26vw);
+	gap: 0.2vw;
 }
 
 .evento-img{
 	text-align: center;
-	margin: 0px 1px 0px 1px;
-	width: 400px;
-	height: 400px;
+	margin: 0 0.1vw 0 0.1vw;
+	height: 26vw;
 }
 
 .evento-img-overlay{
@@ -104,11 +119,19 @@ a{
 	max-width: 100%;
 	height: 100%;
 	transition: 0.5s;
+	position:relative;
 }
 
 .evento-img-overlay:hover{
 	opacity: 1;
 	background: linear-gradient(to bottom, rgba(255,0,0,0), rgb(20, 20, 20));
+}
+
+.evento-img span{
+	position: absolute;
+    bottom: 0;
+	right: 0;
+	left: 0;
 }
 
 .evento-img h1{
@@ -124,7 +147,7 @@ footer{
 	border-top: 10px solid #373737;
 	background-color: #263340;
 	width: 100%;
-	height: 200px;
+	min-height: 12vw;
 	color: white;
 }
 
@@ -140,10 +163,27 @@ footer{
 }
 
 .rodape-item img{
-	max-width: 100px;
-	max-height: 100px;
+	max-width: 50px;
+	max-height: 50px;
 }
 
 .rodape-item a{
+	margin-left: 0.3vw;
 	color: white;
+}
+
+/* Responsividade */
+
+@media screen and (max-width: 500px) {
+	.colecao-img{
+		height: 40vw;
+		width: 40vw;
+	}
+	.evento-grid{
+		grid-template-columns: repeat(2, 50vw);
+		gap: 0.1vw;
+	}
+	.evento-img{
+		height: 50vw;
+	}
 }

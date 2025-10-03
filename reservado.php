@@ -1,6 +1,7 @@
 <?php $titulo = "Gerenciamento" ;?>
 <?php include_once("templates/header.php");?>    
     <main>
+        <a href="<?=$BASE_URL?>/index.php"><h1>Voltar</h1></a>
         <form action="uploadeColecao.php" method="post" enctype="multipart/form-data">
             <h1>Selecionar coleção para upload:</h1>
             <br>

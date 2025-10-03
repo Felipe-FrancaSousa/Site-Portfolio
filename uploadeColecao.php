@@ -68,7 +68,7 @@ if (isset($_FILES['arquivo'])) {
   // Se o arquivo da foto estiver ok, as informações são gravadas no XML
   if($uploadOk == 1){
 
-    $id =($xml->posts->colecao[count($xml->posts->colecao)-1]['id'] + 1);
+    $id = str_replace(' ', '_', $_POST['colecao']);
 
     // Cria a pasta onde a coleção irá ficar
     mkdir("data/artes/".$id);
@@ -86,7 +86,6 @@ if (isset($_FILES['arquivo'])) {
     // Cria o elemento colecao com um atributo ID
     $colecao = $dom->createElement('colecao');
     $root->appendChild($colecao);
-    $colecao->setAttribute('id', $id);
 
     // Cria e inclui os elemntos de nome da coleção e as imagens
     $nome = $dom->createElement('nome', $_POST['colecao']);
@@ -114,7 +113,7 @@ if (isset($_FILES['arquivo'])) {
     }
     // Salva o arquivo usando o DOMDocument para manter a formatação
     $dom->save('data/dados.xml') or die('XML Create Error');
-    
+    echo "<br><br><h1>Envio finalizado com sucesso!</h1><br>";
   }
 }
 ?>

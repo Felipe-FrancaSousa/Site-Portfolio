@@ -2,14 +2,14 @@
 <root>
   <!-- Data dos carrosseis de imagem das artes -->
   <posts>
-    <colecao id="1">
+    <colecao>
       <nome>Sapos RPG</nome>
       <img type="jpg">Sapo Druida</img>
       <img type="jpg">Sapo Guerreiro</img>
       <img type="jpg">Sapo Bardo</img>
       <img type="jpg">Sapo Mago</img>
     </colecao>
-    <colecao id="2">
+    <colecao>
       <nome>Lego Star Wars</nome>
       <img type="png">C3PO</img>
       <img type="png">HanSolo</img>
@@ -25,6 +25,31 @@
       <nome>Feira de Arte e Cultura Pop</nome>
       <data>27/07/2025</data>
       <foto type="png">Bunkyo</foto>
+    </mesa>
+    <mesa>
+      <nome>Maid Café</nome>
+      <data>26/07/2025</data>
+      <foto type="jpeg">Maid cafe</foto>
+    </mesa>
+    <mesa>
+      <nome>El Cabriton</nome>
+      <data>13/09/2025</data>
+      <foto type="jpeg">El Cabriton</foto>
+    </mesa>
+    <mesa>
+      <nome>Shopping</nome>
+      <data>01/08/2025</data>
+      <foto type="jpeg">shopping1</foto>
+    </mesa>
+    <mesa>
+      <nome>Shopping</nome>
+      <data>02/08/2025</data>
+      <foto type="jpeg">Shopping 2</foto>
+    </mesa>
+    <mesa>
+      <nome>Feira de Artesanato</nome>
+      <data>24/08/2025</data>
+      <foto type="jpeg">feira</foto>
     </mesa>
   </evento>
 </root>
