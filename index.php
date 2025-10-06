@@ -9,7 +9,7 @@
                     var slider = tns({
                         container: '.my-slider<?= $i ?>',
                         items: 2, // Quantidade de itens que são exibidos ao mesmo tempo
-                        slideBy: 'page',
+                        slideBy: 2,
                         autoplay: true,
                         mouseDrag: true, // Seta se o carousel pode ser rotacionado com o movimento de clicar e arrastar do mouse
                         autoplayButtonOutput: false, // Seta visibilidade do botão de auto play
@@ -29,10 +29,12 @@
                     <div class="my-slider<?= $i?>">
                         <?php foreach($colecao->img as $arquivo):?>
                             <div class="colecao-img" style ="background: url(<?=$BASE_URL?>data/artes/<?= str_replace(' ','_',$colecao->nome)?>/<?= str_replace(' ', '%20', $arquivo)?>.<?=$arquivo['type']?>);background-size:100% 100%;">
-                                <!-- Cria o overlay com o nome da imagem --> 
-                                <div class = "colecao-img-overlay">
-                                    <span><h1><?php echo $arquivo; ?></h1></span>
-                                </div>
+                                <a href="<?=$BASE_URL?>data/artes/<?= str_replace(' ','_',$colecao->nome)?>/<?= str_replace(' ', '%20', $arquivo)?>.<?=$arquivo['type']?>" data-lightbox="<?=$colecao->nome?>" data-title="<?=$arquivo?>">
+                                    <!-- Cria o overlay com o nome da imagem --> 
+                                    <div class = "colecao-img-overlay">
+                                        <span><h1><?php echo $arquivo; ?></h1></span>
+                                    </div>
+                                </a>
                             </div>
                         <?php endforeach; ?>
                     </div>
@@ -46,13 +48,15 @@
                 <div class="evento-grid">
                     <?php foreach($xml->evento->mesa as $mesas):?>
                         <div class="evento-img" style ="background: url(<?=$BASE_URL?>data/eventos/<?= str_replace(' ', '%20', $mesas->foto)?>.<?=$mesas->foto['type']?>);background-size:100% 100%;">
-                            <!-- Cria o overlay com o nome da imagem --> 
-                            <div class = "evento-img-overlay">
-                                <span>
-                                    <h1><?php echo $mesas->nome?></h1>
-                                    <h1><?php echo $mesas->data?></h1>
-                                </span>
-                            </div>
+                            <!-- Cria o overlay com o nome da imagem -->
+                            <a href="<?=$BASE_URL?>data/eventos/<?= str_replace(' ', '%20', $mesas->foto)?>.<?=$mesas->foto['type']?>" data-lightbox="eventos" data-title="<?=$mesas->nome?> - <?=$mesas->data?>">
+                                <div class = "evento-img-overlay">
+                                    <span>
+                                        <h1><?php echo $mesas->nome?></h1>
+                                        <h1><?php echo $mesas->data?></h1>
+                                    </span>
+                                </div>
+                            </a>
                         </div>
                     <?php endforeach;?>
                 </div>

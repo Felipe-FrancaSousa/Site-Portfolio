@@ -15,4 +15,14 @@
         </div>
     </div>
 </footer>
+<script src="<?= $BASE_URL ?>/helpers/lightbox2-2.11.5/js/lightbox.js"></script>
+<script>
+    lightbox.option({
+      'fadeDuration': 100,
+      'wrapAround': true,
+      'imageFadeDuration': 0,
+      'showImageNumberLabel': false,
+      'alwaysShowNavOnTouchDevices': true,
+    })
+</script>
 </body>

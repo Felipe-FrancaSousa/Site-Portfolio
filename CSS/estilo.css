@@ -10,7 +10,7 @@
 }
 
 body{
-	background-color: rgb(20, 20, 20);
+	background-color: bisque;
 }
 
 main{
@@ -32,6 +32,10 @@ form{
 	color: aliceblue;
 }
 
+.topo img{
+	height: 15vw;
+}
+
 a{
 	text-decoration: none;
 	font-size: 2vw;
@@ -48,17 +52,19 @@ h1{
 /* Estilo do carrossel de imagens */
 
 .colecao-linhas{
-	border-top: 0.3vw solid #373737;
+	border-top: 0.3vw solid rgb(1, 73, 38);
 	
 }
 
 .colecao-nome{
+	color: rgb(134, 90, 68);
 	margin: 0.5vw;
 }
 
 .colecao-img{
 	text-align: center;
-	margin: 0 0.1vw 0 0.1vw;
+	border-left: 0.1vw solid bisque;
+	border-right: 0.1vw solid bisque;
 	height: 20vw;
 	width: 20vw;
 }
@@ -91,10 +97,11 @@ h1{
 /* Estilo da grade de eventos */
 
 .evento-conteiner{
-	border-top: 0.3vw solid #373737;
+	border-top: 0.3vw solid rgb(1, 73, 38);
 }
 
 .evento-titulo{
+	color: rgb(134, 90, 68);
 	text-align: center;
 	margin: 0.5vw;
 }
@@ -144,10 +151,14 @@ h1{
 
 footer{
 	padding: 10px;
-	border-top: 10px solid #373737;
+	border-top: 10px solid rgb(1, 73, 38);
 	background-color: #263340;
 	width: 100%;
 	min-height: 12vw;
+	color: white;
+}
+
+footer h1{
 	color: white;
 }
 
@@ -168,22 +179,45 @@ footer{
 }
 
 .rodape-item a{
-	margin-left: 0.3vw;
 	color: white;
+	margin-left: 0.3vw;
 }
 
 /* Responsividade */
 
 @media screen and (max-width: 500px) {
+	a{
+		font-size: 4vw;
+	}
+
+	p{
+		font-size: 3vw;
+	}
+
+	h1{
+		font-size: 5.4vw;
+	}
+
+	.topo{
+		height: 30vw;
+	}
+
+	.topo img{
+		height: 30vw;
+	}
+
 	.colecao-img{
 		height: 40vw;
 		width: 40vw;
 	}
+
 	.evento-grid{
 		grid-template-columns: repeat(2, 50vw);
 		gap: 0.1vw;
 	}
+
 	.evento-img{
 		height: 50vw;
 	}
+	
 }
