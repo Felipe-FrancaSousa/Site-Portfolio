@@ -13,14 +13,41 @@ body{
 	background-color: bisque;
 }
 
-main{
-	min-height: 15vw;
-	background-color: bisque;
+p{
+	font-size: 1.5vw;
 }
 
-form{
-	margin: 0.5vw;
+h1{
+	font-size: 2.7vw;
 }
+
+a{
+    color:rgb(180, 121, 91);
+	text-decoration: none;
+	font-size: 2vw;
+}
+
+a:visited{
+	text-decoration: none;
+	color:rgb(180, 121, 91);
+}
+
+a:hover{ 
+	text-decoration: none; 
+	color:rgb(230, 192, 255);
+}
+
+a:focus{ 
+	text-decoration: none;
+	color:rgb(230, 192, 255);
+}
+
+a:hover, a:active{
+	text-decoration: none;
+	color:rgb(230, 192, 255);
+}
+
+/* Estilo do topo das páginas */
 
 .topo{
 	width: 100%;
@@ -29,24 +56,10 @@ form{
 	text-align: center;
 	justify-content: center;
 	align-items: center;
-	color: aliceblue;
 }
 
 .topo img{
 	height: 15vw;
-}
-
-a{
-	text-decoration: none;
-	font-size: 2vw;
-}
-
-p{
-	font-size: 1.5vw;
-}
-
-h1{
-	font-size: 2.7vw;
 }
 
 /* Estilo do carrossel de imagens */
@@ -90,7 +103,6 @@ h1{
 }
 
 .colecao-img h1{
-	
 	color: rgb(201, 201, 201);
 }
 
@@ -103,7 +115,7 @@ h1{
 .evento-titulo{
 	color: rgb(134, 90, 68);
 	text-align: center;
-	margin: 0.5vw;
+	margin: 1.2vw;
 }
 
 .evento-grid{
@@ -117,7 +129,6 @@ h1{
 
 .evento-img{
 	text-align: center;
-	margin: 0 0.1vw 0 0.1vw;
 	height: 26vw;
 }
 
@@ -151,7 +162,7 @@ h1{
 
 footer{
 	padding: 10px;
-	border-top: 10px solid rgb(1, 73, 38);
+	border-top: 6px solid rgb(1, 73, 38);
 	background-color: #263340;
 	width: 100%;
 	min-height: 12vw;
@@ -166,6 +177,7 @@ footer h1{
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	justify-content: center;
 }
 
 .rodape-item{
@@ -174,13 +186,56 @@ footer h1{
 }
 
 .rodape-item img{
-	max-width: 50px;
-	max-height: 50px;
+	max-width: 2.6vw;
+	max-height: 2.6vw;
 }
 
 .rodape-item a{
 	color: white;
 	margin-left: 0.3vw;
+}
+
+.restrito{
+	margin-left: auto; 
+	margin-right: 1vw;
+	background-color: #444c53;
+	color: aliceblue;
+	padding: 0.5vw;
+	border-radius: 0.5vw;
+}
+
+/* Estilo das páginas de gerenciamento */
+
+.ferramentas{
+	margin: 0.5vw;
+}
+
+.voltar{
+	padding: 0.5vw;
+	background-color: #444c53;
+	display: inline-block;
+	margin: 1vw;
+	border-radius: 0.5vw;
+}
+
+.login-container{
+    width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.login{
+    text-align: center;
+    margin-top: 5vw;
+    padding: 3.2vw;
+    background-color: rgb(165, 124, 74);
+    border-radius: 2vw;
+}
+
+#msg{
+    color: rgb(104, 6, 6);
 }
 
 /* Responsividade */

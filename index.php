@@ -11,6 +11,7 @@
                         items: 2, // Quantidade de itens que são exibidos ao mesmo tempo
                         slideBy: 2,
                         autoplay: true,
+                        autoWidth:true,
                         mouseDrag: true, // Seta se o carousel pode ser rotacionado com o movimento de clicar e arrastar do mouse
                         autoplayButtonOutput: false, // Seta visibilidade do botão de auto play
                         controls: false, // seta visibilidade das setas de controle
@@ -47,7 +48,11 @@
                 <h1 class="evento-titulo">Eventos já participados: </h1>
                 <div class="evento-grid">
                     <?php foreach($xml->evento->mesa as $mesas):?>
-                        <div class="evento-img" style ="background: url(<?=$BASE_URL?>data/eventos/<?= str_replace(' ', '%20', $mesas->foto)?>.<?=$mesas->foto['type']?>);background-size:100% 100%;">
+                        <div class="evento-img" style ="background: url(<?=$BASE_URL?>data/eventos/<?= str_replace(' ', '%20', $mesas->foto)?>.<?=$mesas->foto['type']?>);
+                                                        background-position: center;
+                                                        background-repeat: no-repeat;
+                                                        background-size: cover;
+                                                        ">
                             <!-- Cria o overlay com o nome da imagem -->
                             <a href="<?=$BASE_URL?>data/eventos/<?= str_replace(' ', '%20', $mesas->foto)?>.<?=$mesas->foto['type']?>" data-lightbox="eventos" data-title="<?=$mesas->nome?> - <?=$mesas->data?>">
                                 <div class = "evento-img-overlay">

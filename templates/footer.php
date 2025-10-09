@@ -13,8 +13,15 @@
                 <p>@Largatixaatropical</passthru>
             </a>
         </div>
+        <div class="restrito">
+             <a href="<?=$BASE_URL?>login.php">
+                <p>Gerenciar</p>
+            </a>
+        </div>
     </div>
 </footer>
+
+
 <script src="<?= $BASE_URL ?>/helpers/lightbox2-2.11.5/js/lightbox.js"></script>
 <script>
     lightbox.option({
